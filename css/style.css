@@ -161,3 +161,61 @@ body {
 .custom-button:hover {
     background-color: #ffb300; /* Slightly darker yellow when hovering */
 }
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* ปรับขนาด Navbar */
+    .navbar-1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* ปรับ Sidebar */
+    .sidebar {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    /* ปรับ layout สินค้า */
+    .product-container {
+        margin-left: 0;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* ปรับ Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ปรับ Sidebar */
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* ปรับ layout สินค้า */
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .product-card img {
+        width: 100px;
+        height: auto;
+    }
+
+    .add-to-cart-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
